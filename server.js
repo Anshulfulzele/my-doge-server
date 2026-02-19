@@ -16,7 +16,7 @@ const bot = new TelegramBot(token, { polling: true });
 app.use(bodyParser.json());
 
 // Basic route to check if server is alive
-app.get('/', (res) => {
+app.get('/', (req, res) => {
     res.send('Server is running properly.');
 });
 
